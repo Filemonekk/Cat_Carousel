@@ -6,16 +6,17 @@
   body {
     padding: 0;
     margin: 0;
-    background-color: #7e3838;
+    background-color: #19371c;
   }
   
   main {
+    height: 80%;
     display: flex;
     text-align: center;
     flex-direction: column;
     margin-top: 70px;
     align-items: center;
-    background-color: #7a3f3f;
+    background-color: #0e471c2d;
   }
   
   #slider {
@@ -59,9 +60,9 @@
   }
   
   #dots .dot {
-    width: 12px;
-    height: 12px;
-    background-color: #3a3a3a;
+    width: 20px;
+    height: 20px;
+    background-color: #222121;
     display: inline-block;
     border-radius: 100%;
     margin-right: 10px;
@@ -74,15 +75,18 @@
   .arrow,
   .dot {
     cursor: pointer;
+    height: 10%;
+    width: 50%;
   }
   
 
   .dog-random {
     position: relative;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     border: 1px black solid;
-    width: 720px;
-    height: 420px;
+    width: 650px;
+    height: 300px;
   }
 
   button {
