@@ -1,3 +1,8 @@
+const btn = document.querySelector('button');
+const img = document.querySelector('img');
+
+const URL = 'https://dog.ceo/api/breeds/image/random'
+
 let activeSlideNumber = 1
 
 let arrowLeft = document.querySelector('.arrow-left');
@@ -45,5 +50,13 @@ for (let i = 1; i <= 3; i++){
 arrowRight.addEventListener('click', showNextSlide)
 arrowLeft.addEventListener('click', showPreviousSlide)
 
+
+
+btn.addEventListener('click', () => {
+    fetch(URL)
+        .then(res => res.json())
+        .then(data => img.setAttribute('src', data.message))
+        .catch(err => console.err(err))
+})
 
 
