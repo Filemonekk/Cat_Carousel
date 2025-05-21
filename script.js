@@ -1,5 +1,5 @@
 const btn = document.querySelector('button');
-const img = document.querySelector('img');
+const imgDog = document.querySelector('.img-dog');
 
 const URL = 'https://dog.ceo/api/breeds/image/random'
 
@@ -49,14 +49,17 @@ for (let i = 1; i <= 3; i++){
 
 arrowRight.addEventListener('click', showNextSlide)
 arrowLeft.addEventListener('click', showPreviousSlide)
-
+setInterval(showNextSlide, 5000);
 
 
 btn.addEventListener('click', () => {
     fetch(URL)
         .then(res => res.json())
-        .then(data => img.setAttribute('src', data.message))
-        .catch(err => console.err(err))
-})
+        .then(data => imgDog.setAttribute('src', data.message))
+        .catch(err => {
+            console.error(err);
+            imgDog.alt = 'Nie udało się pobrać zdjęcia psa.';
+        });
+});
 
 

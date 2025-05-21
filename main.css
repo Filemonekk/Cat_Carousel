@@ -19,34 +19,34 @@
     background-color: #0e471c2d;
   }
   
-  #slider {
+  #cat-slider {
     width: 768px;
     height: 420px;
   }
   
-  #slider #top-row {
+  #cat-slider #top-row {
     width: 768px;
     height: 420px;
     overflow: hidden;
   }
   
-  #slider #top-row {
+  #cat-slider #top-row {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  #slider .slide {
+  #cat-slider .slide {
     display: none;
     width: 100%;
     flex: 1;
   }
   
-  #slider .slide.active {
+  #cat-slider .slide.active {
     display: block;
   }
   
-  #slider #bottom-row {
+  #cat-slider #bottom-row {
     display: flex;
     justify-content: center;
   }
